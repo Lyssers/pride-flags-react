@@ -27,7 +27,7 @@ export default function App() {
 	const [flagVariant, setFlagVariant] = useState('rainbow-original');
 	function handleClick() {	
 		switch (flagVariant){
-			case 'rainbow-original':
+			case 'june':
 				setFlagVariant('trans');
 				break;
 			case 'trans':
@@ -44,6 +44,9 @@ export default function App() {
 				break;
 			case 'rainbow':
 				setFlagVariant('rainbow-original');
+				break;
+			case 'rainbow-original':
+				setFlagVariant('june');
 				break;
 		}
 	
@@ -72,6 +75,7 @@ export default function App() {
 		{/* Slide animation and Paper */}
 		
 			<Slide direction="up" in={checked}>
+			
 			<Paper elevation = {10} sx={{display: 'flex', flexWrap: 'wrap', placeContent: 'center'}}>
 				<Box margin = {2}>
 					
